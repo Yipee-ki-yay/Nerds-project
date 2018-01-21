@@ -51,6 +51,12 @@ h3 {
 	margin: 25px 0 30px 0;
 	text-transform: uppercase;
 }
+h5 {
+	font-family: "Roboto Bold", sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
 .hr {
 	height: 2px;
 	width: 100%;
@@ -142,6 +148,9 @@ header a {
 .main-header a.btn.active {	
 	border-bottom: 2px solid #fb565a;
 	padding-bottom: 7px;
+}
+[class^="icon-"] {
+
 }
 .main-header a.icon-cart:before {
   content: "\f07a";
@@ -339,3 +348,96 @@ sup {
 
 /*Section Info END=========================================*/
 
+/*Section Proects BEGIN====================================*/
+.proects {
+	margin-bottom: 80px;
+}
+.proects .flexing {
+	justify-content: space-around;
+}
+.proects img {
+	opacity: 0.3;
+}
+.proects a:hover img {
+	opacity: 1;
+}
+.proects a:active img {
+	opacity: 0.2;
+}
+.proects .hr {
+	margin-top: 35px;
+}
+/*Section Proects END======================================*/
+
+/*Section Map Begin========================================*/
+.map {
+	margin-bottom: 70px;
+}
+.map .wrapper {
+	position: relative;
+}
+.address_card {
+	position: absolute;
+	top: -379px;
+	background-color: #fff;
+	padding: 55px 50px 50px;
+	max-width: 320px;
+}
+.address_card h5 {
+	margin-top: 0;
+}
+.address_card p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #666;
+}
+.address_card .addr {
+	margin-bottom: 20px;
+}
+.address_card .tel {
+	margin-bottom: 40px;
+}
+
+/*Section Map END==========================================*/
+.social {
+	margin-right: 140px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.social-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.social-item {
+	display: inline-block;
+	margin-right: 10px;
+}
+.social-link {
+	text-decoration: none;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #e1e1e1;
+	line-height: 80px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+}
+.social-descr {
+	display: inline-block;
+	vertical-align: middle;
+}
+.social-title {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 36px;
+}
+.social-sale {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	color: #444;
+}
