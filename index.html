@@ -214,8 +214,25 @@
 					ул. Б. Конюшенная, д. 19/8
 				</p>
 				<p class="tel">тел. +7 (812) 275-75-75</p>
-				<a href="#" class="main-button">Напишите нам</a>
+				<a href="#" class="main-button js-show-popap">Напишите нам</a>
 			</div>
+			<!-- /*Form begin==============================================*/ -->
+			<div class="contacts">
+				<button class="contacts-close" title="Закрыть"></button>
+				<h2 class="contacts_title">Напишите нам</h2>
+				<form action="#" class="contacts-message" method="post">
+					<div class="flexing">
+						<label><span>Ваше имя:</span><input class="contacts_name" type="text" name="name" placeholder="Представтесь, пожалуйста"></label>
+						<label><span>Ваш e-mail:</span><input class="contacts_email" type="text" name="email" placeholder="Для отправки ответа"></label>
+					</div>					
+
+					<label><span>Текст письма:</span><input class="contacts_text" type="textarea" name="text" placeholder="В свободной форме"></label>
+					
+					<button class="main-button" type="submit">Отправить</button>
+				</form>
+			</div>
+			<!-- /*Form end===============================================*/ -->
+
 		</div>
 	</section>
 	<!-- Section Map END ===================================================-->
@@ -245,3 +262,4 @@
 	<script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>
+

@@ -397,8 +397,122 @@ sup {
 .address_card .tel {
 	margin-bottom: 40px;
 }
+	/*Form begin===========*/
+.contacts {
+	display: none;
+	position: absolute;
+	top: -550px;
+    left: 120px;
+
+	padding: 75px 100px 85px;
+	max-width: 960px;
+	color: #000;
+	background-color: #fff;
+	box-shadow: 0 20px 40px rgba(0,1,1, 0.75);
+}
+.contacts-show {
+	display: block;
+	animation: bounce 0.6s;
+}
+.contacts-close {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	top: 90px;
+    right: 90px;
+
+	font-size: 0;
+
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+}
+.contacts-close::after,
+.contacts-close::before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: -1px;
+
+	width: 25px;
+	height: 5px;
+
+	background-color: #fecccd;
+}
+.contacts-close::before {
+	transform: rotate(45deg);
+}
+.contacts-close::after {
+	transform: rotate(-45deg);
+}
+.contacts-close:hover::after,
+.contacts-close:hover::before {
+	background-color: #fb565a;
+}
+.contacts-close:active::after,
+.contacts-close:active::before {
+	background-color: #ffeeee;
+}
+.contacts h2 {
+	margin: 0;
+	margin-bottom: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 45px;
+	line-height: 45px;
+}
+.contacts-message input {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	color: #444;
+	height: 46px;
+	border: 2px solid #d7dcde;
+	padding: 0 14px;
+}
+.contacts-message input:hover{
+	border: 2px solid #b4b9bb;
+}
+.contacts-message input:focus{
+	border: 2px solid #000;
+	outline: transparent;
+}
+.contacts-message input[type=text] {
+	max-width: 340px;
+	margin-bottom: 35px;
+	width: 328px;
+}
+.contacts-message span {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+	color: #000;
+	display: block;
+	max-width: 360px;
+	margin-bottom: 12px;
+}
+.contacts-message .contacts_name {
+	margin-right: 40px;
+}
+.contacts-message .contacts_text {
+	width: 728px;
+	min-height: 115px;
+	margin-bottom: 47px;
+}
+.contacts-message button {
+	display: block;
+	border: none;
+	width: 260px;
+}
+	/*Form end=============*/
+
 
 /*Section Map END==========================================*/
+
+/*Footer Begin=============================================*/
+footer {
+	margin-bottom: 70px;
+}
 .social {
 	margin-right: 140px;
 	display: inline-block;
@@ -425,6 +539,13 @@ sup {
 	color: #fff;
 	font-size: 20px;
 }
+.social-link:hover {
+	background-color: #e74246;
+}
+.social-link:active{
+	background-color: #d7373b;
+	box-shadow: inset 0px 3px 0 0 rgba(0,1,1, .1);
+}
 .social-descr {
 	display: inline-block;
 	vertical-align: middle;
@@ -440,4 +561,22 @@ sup {
 	font-size: 16px;
 	line-height: 22px;
 	color: #444;
+}
+/*Footer END=============================================*/
+
+@keyframes bounce {
+	0% {transform: translateY(-200px);}
+	70% {transform: translateY(30px);}
+	90% {transform: translateY(-10px);}
+	100% {transform: translateY(0px);}
+}
+
+@keyframes shake {
+	0%, 100% 			{transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	20%, 40%, 60%, 80%	{transform: translateX(10px);}
+}
+
+.modal-error {
+	animation: shake 0.6s;
 }
