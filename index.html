@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nerds</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fonts.css">
@@ -10,7 +11,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
+	<header class="main-header">
 		<div class="wrapper">
 			<div class="main-header flexing">
 				<div class="logo">
@@ -26,7 +27,7 @@
 							<a href="#" class="header-nav__link">Клиенты</a>
 						</li>
 						<li class="header-nav__item">
-							<a href="#" class="header-nav__link">Магазин</a>
+							<a href="catalog.html" class="header-nav__link">Магазин</a>
 						</li>
 						<li class="header-nav__item">
 							<a href="#" class="header-nav__link">Контакты</a>
@@ -231,6 +232,7 @@
 					<button class="main-button" type="submit">Отправить</button>
 				</form>
 			</div>
+			<div class="contacts-overlay"></div>
 			<!-- /*Form end===============================================*/ -->
 
 		</div>
@@ -238,13 +240,13 @@
 	<!-- Section Map END ===================================================-->
 
 	<!-- Section Footer Begin ==============================================-->
-	<footer>
+	<footer class="main-footer">
 		<div class="wrapper">
 			<div class="social">
 				<ul class="social-list">
-					<li class="social-item"><a href="#" class="social-link icon-vk"></a></li>
-					<li class="social-item"><a href="#" class="social-link icon-facebook"></a></li>
-					<li class="social-item"><a href="#" class="social-link icon-instagram"></a></li>
+					<li class="social-item" aria-label="Вконтакте"><a href="#" class="social-link icon-vk"></a></li>
+					<li class="social-item" aria-label="Фейсбук"><a href="#" class="social-link icon-facebook"></a></li>
+					<li class="social-item" aria-label="Инстаграм"><a href="#" class="social-link icon-instagram"></a></li>
 				</ul>
 			</div>
 
@@ -255,6 +257,7 @@
 		</div>
 	</footer>
 	<!-- Section Footer END ================================================-->
+
 
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>

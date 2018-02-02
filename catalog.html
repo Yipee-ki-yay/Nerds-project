@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nerds-catalog</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="main-header">
+		<div class="wrapper">
+			<div class="main-header flexing">
+				<div class="logo">
+					<a href="index.html"><img src="img/nerds-logo.png" alt="logo"></a>
+				</div>
+
+				<nav class="header-nav">
+					<ul class="header-nav__menu">
+						<li class="header-nav__item">
+							<a href="#" class="header-nav__link">Студия</a>
+						</li>
+						<li class="header-nav__item active">
+							<a href="#" class="header-nav__link">Клиенты</a>
+						</li>
+						<li class="header-nav__item">
+							<a href="#" class="header-nav__link">Магазин</a>
+						</li>
+						<li class="header-nav__item">
+							<a href="#" class="header-nav__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+
+				<a href="#" class="btn icon-cart active">Корзина</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- begin Section shop =============================================-->
+	<section class="shop">
+		<div class="wrapper">
+			<h1 class="shop-title">Магазин готовых шаблонов</h1>	
+		</div>
+	</section>
+	<!-- end Section shop =============================================-->
+
+	<!-- begin Section main-catalog -->
+	<section class="main-catalog">
+		<div class="wrapper">
+			<div class="flexing">
+				<!-- form BEGIN ==============================================-->
+				<form action="#" method="post" class="catalog-form">
+					<p class="range-filter-title">Стоимость:</p>
+					<div class="range-filter">
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar" style="width:70%"></div>
+							</div>
+							<div class="toggle min-toggle"></div>
+							<div class="toggle max-toggle"></div>
+						</div>
+
+						<div class="price-controls">
+							<label class="min-price-wrap">
+								от <input name="min-price" type="text" value="0" class="min-price">
+							</label>
+							<label class="max-price-wrap">
+								до <input name="max-price" type="text" value="15 000" class="max-price">
+							</label>
+						</div>
+					</div>
+					
+					<p class="form-grids-title">Сетка:</p>
+					<ul class="catalog-form-grids">
+						<li class="catalog-form-grid">
+							<label for="radiobutton1">
+								<input id="radiobutton1" name="radiobutton" value="Адаптивная" type="radio" >			
+								<span class="radiobutton"></span>
+								Адаптивная
+							</label>
+						</li>
+						<li class="catalog-form-grid">
+							<label for="radiobutton2">							
+								<input id="radiobutton2" name="radiobutton" value="Фиксированная" type="radio">
+								<span class="radiobutton"></span>						
+								Фиксированная							
+							</label>
+						</li>
+						<li class="catalog-form-grid">
+							<label for="radiobutton3">							
+								<input id="radiobutton3" name="radiobutton" value="Резиновая" type="radio">
+								<span class="radiobutton"></span>
+								Резиновая
+							</label>
+						</li>
+					</ul>
+					
+					<p class="form-features-title">Особенности:</p>
+					<ul class="catalog-form-features">
+						<li class="catalog-form-feature">
+							<input id="check1" type="checkbox">
+							<label for="check1">Слайдер</label>
+						</li>
+						<li class="catalog-form-feature">
+							<input id="check2" type="checkbox">
+							<label for="check2">Блок преимуществ</label>
+						</li>
+						<li class="catalog-form-feature">
+							<input id="check3" type="checkbox">
+							<label for="check3">Новости</label>
+						</li>
+						<li class="catalog-form-feature">
+							<input id="check4" type="checkbox">
+							<label for="check4">Галерея</label>
+						</li>
+						<li class="catalog-form-feature">
+							<input id="check5" type="checkbox">
+							<label for="check5">Корзина</label>
+						</li>
+					</ul>
+
+					<button class="main-button catalog-button">Показать</button>
+				</form>
+				<!-- form END =================================================-->
+					
+				<div class="catalog-items">
+					<header class="catalog-items-header">
+						<p>
+							<span class="items-sort-title">Сортировать:</span>
+							<span class="items-sort-point">
+								<button class="price-sort">По цене</button>
+							</span>
+							<span class="items-sort-point">
+								<button class="type-sort">По типу</button>
+							</span>
+							<span class="items-sort-point">
+								<button class="name-sort">По названию</button>
+							</span>
+							<span class="items-sort-point">
+								<button class="down-arrow"></button>
+							</span>
+							<span class="items-sort-point">
+								<button class="up-arrow"></button>
+							</span>
+						</p>
+					</header>
+
+					<main class="catalog-items-main flexing">
+						<!-- first catalog-item ================================================ -->
+						<div class="catalog-item">							
+							<div class="catalog-item-head">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<img class="catalog-item-image" src="img/img-sedona.jpg" alt="макет">
+
+							<div class="catalog-item-info">
+								<p class="item-info-title">Sedona</p>
+								<p class="item-info-descr">
+									Информационный сайт для туристов
+								</p>
+								<a href="" class="main-button item-descr__button btn-red">9900 Руб.</a>
+							</div>
+
+						</div>
+
+						<!-- second catalog-item ================================================ -->						
+						<div class="catalog-item">							
+							<div class="catalog-item-head">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<img class="catalog-item-image" src="img/img-pink.jpg" alt="макет">
+
+							<div class="catalog-item-info">
+								<p class="item-info-title">Pink App</p>
+								<p class="item-info-descr">Продуктовый лендинг приложения для iOS и Android</p>
+								<a href="" class="main-button item-descr__button btn-red">9900 Руб.</a>
+							</div>
+
+						</div>
+
+						<!-- third catalog-item ================================================ -->
+						<div class="catalog-item">							
+							<div class="catalog-item-head">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<img class="catalog-item-image" src="img/img-barbershop.jpg" alt="макет">
+
+							<div class="catalog-item-info">
+								<p class="item-info-title">Barbershop</p>
+								<p class="item-info-descr">Сайт салоны красоты. Для мужчин, да.</p>
+								<a href="" class="main-button item-descr__button btn-red">9900 Руб.</a>
+							</div>
+
+						</div>
+
+						<!-- fourth catalog-item ================================================ -->
+						<div class="catalog-item">							
+							<div class="catalog-item-head">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<img class="catalog-item-image" src="img/img-mishka.jpg" alt="макет">
+
+							<div class="catalog-item-info">
+								<p class="item-info-title">MISHKA</p>
+								<p class="item-info-descr">Интернет-магазин вязаных игрушек</p>
+								<a href="" class="main-button item-descr__button btn-red">9900 Руб.</a>
+							</div>
+
+						</div>
+
+						<!-- fifth catalog-item ================================================ -->
+						<div class="catalog-item">							
+							<div class="catalog-item-head">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<img class="catalog-item-image" src="img/img-aplus.jpg" alt="макет">
+
+							<div class="catalog-item-info">
+								<p class="item-info-title">A Plus</p>
+								<p class="item-info-descr">Лендинг курсов повышения квалификации</p>
+								<a href="" class="main-button item-descr__button btn-red">9900 Руб.</a>
+							</div>
+
+						</div>
+
+						<!-- sixth catalog-item ================================================ -->
+						<div class="catalog-item">							
+							<div class="catalog-item-head">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<img class="catalog-item-image" src="img/img-kvast.jpg" alt="макет">
+
+							<div class="catalog-item-info">
+								<p class="item-info-title">КВАСТ</p>
+								<p class="item-info-descr">Промо-сайт производителя крафтового кваса</p>
+								<a href="" class="main-button item-descr__button btn-red">9900 Руб.</a>
+							</div>
+
+						</div>
+
+					</main>
+
+					<footer class="catalog-items-footer">
+						<div class="paginator">
+							<button class="main-button catalog-button paginator-btn active">1</button>
+							<button class="main-button catalog-button paginator-btn">2</button>
+							<button class="main-button catalog-button paginator-btn">3</button>
+							<button class="main-button catalog-button paginator-btn-next">Следующая</button>
+						</div>
+					</footer>
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- end Section main-catalog -->
+
+	<!-- Section Map Begin ===================================================-->
+	<section class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6108436341826!2d30.322095!3d59.9385994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1516521440108" width="100%" height="417" frameborder="0" style="border:0" allowfullscreen></iframe>
+		
+		<div class="wrapper">
+			<div class="address_card">
+				<h5>NЁRDS DESIGN STUDIO</h5>
+				<p class="addr">
+					191186, Санкт-Петербург,<br> 
+					ул. Б. Конюшенная, д. 19/8
+				</p>
+				<p class="tel">тел. +7 (812) 275-75-75</p>
+				<a href="#" class="main-button js-show-popap">Напишите нам</a>
+			</div>
+			<!-- /*Form begin==============================================*/ -->
+			<div class="contacts">
+				<button class="contacts-close" title="Закрыть"></button>
+				<h2 class="contacts_title">Напишите нам</h2>
+				<form action="#" class="contacts-message" method="post">
+					<div class="flexing">
+						<label><span>Ваше имя:</span><input class="contacts_name" type="text" name="name" placeholder="Представтесь, пожалуйста"></label>
+						<label><span>Ваш e-mail:</span><input class="contacts_email" type="text" name="email" placeholder="Для отправки ответа"></label>
+					</div>					
+
+					<label><span>Текст письма:</span><input class="contacts_text" type="textarea" name="text" placeholder="В свободной форме"></label>
+					
+					<button class="main-button" type="submit">Отправить</button>
+				</form>
+			</div>
+			<div class="contacts-overlay"></div>
+			<!-- /*Form end===============================================*/ -->
+
+		</div>
+	</section>
+	<!-- Section Map END ===================================================-->
+
+	<!-- Section Footer Begin ==============================================-->
+	<footer class="main-footer">
+		<div class="wrapper">
+			<div class="social">
+				<ul class="social-list">
+					<li class="social-item" aria-label="Вконтакте"><a href="#" class="social-link icon-vk"></a></li>
+					<li class="social-item" aria-label="Фейсбук"><a href="#" class="social-link icon-facebook"></a></li>
+					<li class="social-item" aria-label="Инстаграм"><a href="#" class="social-link icon-instagram"></a></li>
+				</ul>
+			</div>
+
+			<div class="social-descr">
+				<h2 class="social-title">Давайте дружить, это выгодно!</h2>
+				<p class="social-sale">Скидка 10% для друзей из социальных сетей.</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Section Footer END ================================================-->
+
+
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
+

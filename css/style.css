@@ -65,10 +65,11 @@ h5 {
 }
 /*Section HEADER  =========================================================*/
 
-header {
+header.main-header,
+.shop {
 	background-color: #eeeeee;
 }
-header a {
+header.main-header a {
 	margin-left: auto;
 }
 .wrapper {
@@ -235,7 +236,7 @@ ul.slick-dots  {
     margin: 0;
     cursor: pointer;
     border: 0;
-    outline: none;
+    /*outline: none;*/
     background-color: #fff;
     border-radius: 50%;
 }
@@ -401,11 +402,14 @@ sup {
 .contacts {
 	display: none;
 	position: absolute;
+	z-index: 2;
 	top: -550px;
     left: 120px;
 
 	padding: 75px 100px 85px;
-	max-width: 960px;
+	width: 100%;
+	max-width: 760px;
+
 	color: #000;
 	background-color: #fff;
 	box-shadow: 0 20px 40px rgba(0,1,1, 0.75);
@@ -460,6 +464,13 @@ sup {
 	font-size: 45px;
 	line-height: 45px;
 }
+.contacts-message label {
+	width: 100%;
+	display: block;
+}
+.contacts-message label:first-child {
+	margin-right: 40px;
+}
 .contacts-message input {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
@@ -474,12 +485,12 @@ sup {
 }
 .contacts-message input:focus{
 	border: 2px solid #000;
-	outline: transparent;
+	/*outline: transparent;*/
 }
 .contacts-message input[type=text] {
-	max-width: 340px;
+	max-width: 328px;
 	margin-bottom: 35px;
-	width: 328px;
+	width: 100%;
 }
 .contacts-message span {
 	font-family: 'Roboto', sans-serif;
@@ -492,10 +503,10 @@ sup {
 	margin-bottom: 12px;
 }
 .contacts-message .contacts_name {
-	margin-right: 40px;
 }
 .contacts-message .contacts_text {
-	width: 728px;
+	max-width: 728px;
+	width: 100%;
 	min-height: 115px;
 	margin-bottom: 47px;
 }
@@ -504,14 +515,25 @@ sup {
 	border: none;
 	width: 260px;
 }
+		/*Overlay*/
+.contacts-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
 	/*Form end=============*/
+
 
 
 /*Section Map END==========================================*/
 
 /*Footer Begin=============================================*/
-footer {
-	margin-bottom: 70px;
+.main-footer {
+	padding-bottom: 70px;
 }
 .social {
 	margin-right: 140px;
@@ -555,12 +577,15 @@ footer {
 	font-weight: bold;
 	font-size: 36px;
 	line-height: 36px;
+	margin-bottom: 12px;
+	margin-top: 0;
 }
 .social-sale {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
 	color: #444;
+	margin: 0;
 }
 /*Footer END=============================================*/
 
@@ -579,4 +604,393 @@ footer {
 
 .modal-error {
 	animation: shake 0.6s;
+}
+
+/*Catalog.html============================================*/
+
+
+/*section shop begin==============================================*/
+.shop {
+	margin-bottom: 60px;
+}
+.shop-title {
+	font-family: "Roboto", sans-serif;
+	font-size: 55px;
+	line-height: 55px;
+	text-align: center;
+	color: #000;
+	padding: 81px 0 117px;
+	margin: 0;
+}
+/*section shop END==============================================*/
+
+/*section main-catalog begin ==================================*/
+.main-catalog {
+	margin-bottom: 60px;
+}
+.main-catalog .flexing {
+	justify-content: space-between;
+	-ms-align-items: flex-start;
+	align-items: flex-start;
+}
+
+	/*form begin*/
+.catalog-form {
+	max-width: 260px;
+	width: 100%;
+}
+.catalog-form ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.catalog-form .range-filter-title {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+}
+.range-filter {
+	max-width: 260px;
+	font-family: "Roboto", sans-serif;
+}
+.range-controls {
+	position: relative;
+	height: 80px;
+	margin-bottom: 15px;
+	padding: 0 20px;
+	background: #f1f1f1;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.range-controls .scale {
+	margin-top: 39px;
+	height: 2px;
+	background: #d7dcde;
+}
+.range-controls .bar {
+	height: 2px;
+	background: #00ca74;
+}
+.range-controls .toggle {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	width: 4px;
+	height: 4px;
+	border: 8px solid white;
+	background: #ababab;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+.range-controls .max-toggle {
+	left: 120px;
+}
+.price-controls input {
+	width: 60px;
+	padding: 8px 10px;
+	margin-left: 10px;
+	border: none;
+	background: #f1f1f1;	
+	font-size: 16px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	text-align: center;
+	color: #283136;
+	border-radius: 5px;
+}
+.price-controls {
+	position: relative;
+}
+.min-price-wrap,
+.max-price-wrap {
+	position: absolute;
+}
+.min-price-wrap {
+	left: 0;
+}
+.max-price-wrap {
+	right: 0;
+}
+.form-grids-title,
+.form-features-title {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.form-grids-title {
+	margin-top: 108px;
+}
+.catalog-form .catalog-form-grids {
+	margin-bottom: 50px;
+}
+.catalog-form-grid {
+	margin-bottom: 15px;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #283136;
+}
+.catalog-form-grid input[type="radio"]{
+	display: none;
+}
+.catalog-form-grid .radiobutton {
+	position: relative;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	vertical-align: middle;	
+	border: 4px solid #b8b8b8;
+	border-radius: 50%;
+	margin-right: 10px;
+	color: #283136;
+
+}
+.catalog-form-grid input[type="radio"]:checked + .radiobutton:before {
+	content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 9px;
+    height: 9px;
+    background-color: #b8b8b8;
+    border-radius: 50%;
+}
+.catalog-form-grid:hover .radiobutton {
+	border: 4px solid #4d4d4d;
+	color: #000;
+}
+.catalog-form-grid:hover input[type="radio"]:checked + .radiobutton:before {
+	background-color: #4d4d4d;
+}
+.catalog-form .catalog-form-features {
+	margin-bottom: 50px;
+}
+.catalog-form-feature {
+	margin-bottom: 17px;
+}
+.catalog-form-feature input {
+	display: none;
+}
+.catalog-form-feature input[type="checkbox"] + label {
+	display: block;
+	margin: 10px 0;
+	line-height: 20px;
+	position: relative;
+	padding-left: 35px;
+	cursor: pointer;
+}
+.catalog-form-feature input[type="checkbox"] + label:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 24px;
+	background-image: url(../img/sprite_checkboxes.png);	
+	background-position: -7px -10px;
+	background-repeat: no-repeat;
+}
+.catalog-form-feature input[type="checkbox"]:checked + label:before {
+	background-image: url(../img/sprite_checkboxes.png);	
+	background-position: -50px -10px;
+	background-repeat: no-repeat;
+}
+/*.catalog-form */.catalog-button {
+	max-width: 260px;
+	width: 100%;
+	border: none;
+	background-color: #eeeeee;
+	color: #000;
+	font-family: "Roboto Medium", sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+}
+/*.catalog-form */.catalog-button:hover{
+	background-color: #dfdfdf;
+	color: #1e1e1e;
+}
+/*.catalog-form */.catalog-button:active{
+	background-color: #d5d5d5;
+	color: #b7b7b7;
+	box-shadow: inset 0 3px 0 0 rgba(0,1,1, .1);
+}
+
+
+	/*form end*/
+
+.catalog-items {
+	max-width: 760px;
+	width: 100%;
+}
+.catalog-items p {
+	margin-top: 18px;
+}
+.catalog-items .items-sort-title {
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+	text-transform: uppercase;	
+	line-height: 30px;
+	display: inline-block;
+	max-width: 360px;
+	width: 100%;
+	margin-right: 40px;
+}
+.catalog-items .items-sort-point button {
+	text-transform: uppercase;
+	font-family: "Roboto", sans-srif;
+	font-size: 14px;
+	line-height: 18px;
+	color: rgba(0,0,0, 0.3);
+	margin-right: 7px;
+}
+.catalog-items .items-sort-point button {	
+	width: auto;
+	border:none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.catalog-items .items-sort-point button:hover{
+	color: rgba(0,0,0, 0.6);
+}
+.catalog-items .items-sort-point button:active {
+	color: rgba(0,0,0, 1);
+}
+.catalog-items .items-sort-point button.down-arrow,
+.catalog-items .items-sort-point button.up-arrow {
+	width: 0;
+	height: 0;
+	padding: 0;
+	border: 9px solid transparent;
+	border-left: 4.5px solid transparent;
+	border-right: 4.5px solid transparent;
+}
+.catalog-items .items-sort-point button.down-arrow {
+	margin-left: 18px;
+	margin-right: 15px;
+	border-top-color: rgba(0,0,0, 0.3);
+	border-bottom: 0;
+	vertical-align: middle;
+}
+.catalog-items .items-sort-point button.up-arrow {
+	border-bottom-color: rgba(0,0,0, 0.3);
+	border-top: 0;
+	vertical-align: middle;
+}
+.catalog-items .items-sort-point button.down-arrow:hover {
+	border-top-color: rgba(0,0,0, 0.6);
+}
+.catalog-items .items-sort-point button.down-arrow:active {
+	border-top-color: rgba(0,0,0, 1);
+}
+.catalog-items .items-sort-point button.up-arrow:hover {
+	border-bottom-color: rgba(0,0,0, 0.6);
+}
+.catalog-items .items-sort-point button.up-arrow:active {
+	border-bottom-color: rgba(0,0,0, 1);
+}
+
+	/*catalog-items-main*/
+
+.catalog-items-main {
+	margin-bottom: 24px;
+}
+
+.catalog-items-main.flexing {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.catalog-item {
+	position: relative;
+	max-width: 360px;
+	margin-bottom: 36px;
+}
+.catalog-item-head {
+	height: 41px;	
+	line-height: 41px;
+	background-color: #e9e9e9;
+	font-size: 0;
+}
+.catalog-item-head span {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: #fff;	
+	vertical-align: middle;
+	margin-right: 9px;
+}
+.catalog-item-head span:first-child {
+	margin-left: 16px;
+}
+.catalog-item-info {
+	display: none;
+	position: absolute;
+	bottom: 4px;
+	background-color: #eeeeee;
+	text-align: center;
+	padding: 22px 60px 43px;
+}
+.catalog-item:hover .catalog-item-info {
+	display: block;
+}
+.catalog-item:hover .catalog-item-head {
+	background-color: #4d4d4d;
+}
+.catalog-item-info .item-info-title {
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+.catalog-item-info .item-info-descr {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	color: #666;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+
+
+/*section main-catalog END ==================================*/
+
+/*section footer-catalog BEGIN ==================================*/
+.paginator {
+	font-size: 0;
+}
+.paginator-btn {
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin-right: 11px;
+}
+.paginator-btn-next {
+	height: 50px;
+	padding: 0;
+}
+.paginator-btn.active {
+	background-color: #fff;
+	box-shadow: inset 0 0 0px 3px #dbdbdb;
+}
+
+/*section footer-catalog END ==================================*/
+
+
+
+/*== helpful classes, hold at the end of stylesheet ==*/
+.show {
+	display: block; 
 }
