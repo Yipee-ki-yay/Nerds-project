@@ -22,11 +22,11 @@
 						<li class="header-nav__item">
 							<a href="#" class="header-nav__link">Студия</a>
 						</li>
-						<li class="header-nav__item active">
+						<li class="header-nav__item">
 							<a href="#" class="header-nav__link">Клиенты</a>
 						</li>
-						<li class="header-nav__item">
-							<a href="#" class="header-nav__link">Магазин</a>
+						<li class="header-nav__item active">
+							<a class="header-nav__link">Магазин</a>
 						</li>
 						<li class="header-nav__item">
 							<a href="#" class="header-nav__link">Контакты</a>
@@ -34,7 +34,7 @@
 					</ul>
 				</nav>
 
-				<a href="#" class="btn icon-cart active">Корзина</a>
+				<a href="#" class="btn icon-cart">Корзина</a>
 			</div>
 		</div>
 	</header>
@@ -73,54 +73,58 @@
 						</div>
 					</div>
 					
-					<p class="form-grids-title">Сетка:</p>
-					<ul class="catalog-form-grids">
-						<li class="catalog-form-grid">
-							<label for="radiobutton1">
-								<input id="radiobutton1" name="radiobutton" value="Адаптивная" type="radio" >			
-								<span class="radiobutton"></span>
-								Адаптивная
-							</label>
-						</li>
-						<li class="catalog-form-grid">
-							<label for="radiobutton2">							
-								<input id="radiobutton2" name="radiobutton" value="Фиксированная" type="radio">
-								<span class="radiobutton"></span>						
-								Фиксированная							
-							</label>
-						</li>
-						<li class="catalog-form-grid">
-							<label for="radiobutton3">							
-								<input id="radiobutton3" name="radiobutton" value="Резиновая" type="radio">
-								<span class="radiobutton"></span>
-								Резиновая
-							</label>
-						</li>
-					</ul>
+					<div class="catalog-form-wrapper">
+						<p class="form-grids-title">Сетка:</p>
+						<ul class="catalog-form-grids">
+							<li class="catalog-form-grid">
+								<label for="radiobutton1">
+									<input id="radiobutton1" name="radiobutton" value="Адаптивная" type="radio">			
+									<span class="radiobutton"></span>
+									<span class="radio-text">Адаптивная</span>
+								</label>
+							</li>
+							<li class="catalog-form-grid">
+								<label for="radiobutton2">							
+									<input id="radiobutton2" name="radiobutton" value="Фиксированная" type="radio">
+									<span class="radiobutton"></span>						
+									Фиксированная							
+								</label>
+							</li>
+							<li class="catalog-form-grid">
+								<label for="radiobutton3">							
+									<input id="radiobutton3" name="radiobutton" value="Резиновая" type="radio">
+									<span class="radiobutton"></span>
+									Резиновая
+								</label>
+							</li>
+						</ul>
+					</div>
 					
-					<p class="form-features-title">Особенности:</p>
-					<ul class="catalog-form-features">
-						<li class="catalog-form-feature">
-							<input id="check1" type="checkbox">
-							<label for="check1">Слайдер</label>
-						</li>
-						<li class="catalog-form-feature">
-							<input id="check2" type="checkbox">
-							<label for="check2">Блок преимуществ</label>
-						</li>
-						<li class="catalog-form-feature">
-							<input id="check3" type="checkbox">
-							<label for="check3">Новости</label>
-						</li>
-						<li class="catalog-form-feature">
-							<input id="check4" type="checkbox">
-							<label for="check4">Галерея</label>
-						</li>
-						<li class="catalog-form-feature">
-							<input id="check5" type="checkbox">
-							<label for="check5">Корзина</label>
-						</li>
-					</ul>
+					<div class="form-features-wrapper">
+						<p class="form-features-title">Особенности:</p>
+						<ul class="catalog-form-features">
+							<li class="catalog-form-feature">
+								<input id="check1" type="checkbox">
+								<label for="check1">Слайдер</label>
+							</li>
+							<li class="catalog-form-feature">
+								<input id="check2" type="checkbox">
+								<label for="check2">Блок преимуществ</label>
+							</li>
+							<li class="catalog-form-feature">
+								<input id="check3" type="checkbox">
+								<label for="check3">Новости</label>
+							</li>
+							<li class="catalog-form-feature">
+								<input id="check4" type="checkbox">
+								<label for="check4">Галерея</label>
+							</li>
+							<li class="catalog-form-feature">
+								<input id="check5" type="checkbox">
+								<label for="check5">Корзина</label>
+							</li>
+						</ul>
+					</div>
 
 					<button class="main-button catalog-button">Показать</button>
 				</form>
@@ -139,12 +143,15 @@
 							<span class="items-sort-point">
 								<button class="name-sort">По названию</button>
 							</span>
-							<span class="items-sort-point">
-								<button class="down-arrow"></button>
+							<span class="arrow-wrapper">
+								<span class="items-sort-point">
+									<button class="down-arrow"></button>
+								</span>
+								<span class="items-sort-point">
+									<button class="up-arrow"></button>
+								</span>
 							</span>
-							<span class="items-sort-point">
-								<button class="up-arrow"></button>
-							</span>
+							
 						</p>
 					</header>
 
@@ -290,7 +297,7 @@
 					ул. Б. Конюшенная, д. 19/8
 				</p>
 				<p class="tel">тел. +7 (812) 275-75-75</p>
-				<a href="#" class="main-button js-show-popap">Напишите нам</a>
+				<a href="#" class="main-button btn-red js-show-popap">Напишите нам</a>
 			</div>
 			<!-- /*Form begin==============================================*/ -->
 			<div class="contacts">
@@ -304,7 +311,7 @@
 
 					<label><span>Текст письма:</span><input class="contacts_text" type="textarea" name="text" placeholder="В свободной форме"></label>
 					
-					<button class="main-button" type="submit">Отправить</button>
+					<button class="main-button btn-red" type="submit">Отправить</button>
 				</form>
 			</div>
 			<div class="contacts-overlay"></div>

@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?elsmn8');
-  src:  url('../fonts/icomoon.eot?elsmn8#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?elsmn8') format('truetype'),
-    url('fonts/icomoon.woff?elsmn8') format('woff'),
-    url('../fonts/icomoon.svg?elsmn8#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?es1djd');
+  src:  url('../fonts/icomoon.eot?es1djd#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?es1djd') format('truetype'),
+    url('../fonts/icomoon.woff?es1djd') format('woff'),
+    url('../fonts/icomoon.svg?es1djd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon';
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-checkbox-on1:before {
+  content: "\e900";
+}
+.icon-checkbox-off1:before {
+  content: "\e901";
+}
 .icon-cart:before {
   content: "\f07a";
 }

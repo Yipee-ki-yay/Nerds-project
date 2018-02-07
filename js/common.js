@@ -8,13 +8,8 @@ const textField = popap.querySelector('.contacts_text');
 const storage = localStorage.getItem("login");
 const overlay = document.querySelector('.contacts-overlay');
 
-const shopItemsContainer = document.querySelector('.catalog-items');
-const shopItems = document.querySelectorAll('.catalog-item');
-const shopItemHover = document.querySelectorAll('.catalog-item-info');
 
-
-
-btnPopap.addEventListener("click", function(){
+btnPopap.addEventListener("click", function(event){
 	event.preventDefault();
 	popap.classList.add('contacts-show');
 	overlay.classList.add('show');
@@ -26,14 +21,14 @@ btnPopap.addEventListener("click", function(){
 	}
 });
 
-btnClose.addEventListener("click", function() {
+btnClose.addEventListener("click", function(event) {
 	event.preventDefault();
 	popap.classList.remove('contacts-show');
 	popap.classList.remove('modal-error');
 	overlay.classList.remove('show');
 });
 
-overlay.addEventListener("click", function (){
+overlay.addEventListener("click", function (event){
 	popap.classList.remove('contacts-show');
 	popap.classList.remove('modal-error');
 	overlay.classList.remove('show');
@@ -49,7 +44,7 @@ window.addEventListener("keydown", function(event) {
 	}
 });
 
-form.addEventListener("submit", function(){
+form.addEventListener("submit", function(event){
 	if (!nameField.value || !pasField.value || !textField.value) {
 		event.preventDefault();
 		popap.classList.add("modal-error");
@@ -58,41 +53,15 @@ form.addEventListener("submit", function(){
 	}
 });
 
-//====================================================================== catalog-item hover effect begin
-
-// document.onmouseover = function (event) {
-// 	let target = event.target;
-// 	console.log(event.target);	
-// 	if (target.className == "catalog-item-head" || target.className == "catalog-item-image") {
-// 		let hideItem = target.parentElement.getElementsByClassName('catalog-item-info');
-// 		hideItem[0].classList.add('show');
-// 	}	 
-	// else if (target.className != "catalog-item-head" || target.className != "catalog-item-image" || target.className != "catalog-item-info") {
-	// 	for (let i = 0; i < shopItemHover.length; i++) {
-	// 		shopItemHover[i].classList.remove('show');
-	// 	}
-	// }
-//}
-
-// shopItems.addEventListener("mouseover", function(){
-// 	shopItemHover.classList.add('show');
-// });
-// shopItem.addEventListener("mouseout", function(){
-// 	shopItemHover.classList.remove('show');
-// });
-
-//====================================================================== catalog-item hover effect begin
 
 //====================== Slider BEGIN
 
 $(function(){
-
 	$('.slider').slick({
 		infinite: true,
 		dots: true,
 		arrows: false,
 	});
+});
 
 //====================== Slider END
-
-});
